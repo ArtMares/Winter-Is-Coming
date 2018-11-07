@@ -13,7 +13,8 @@ data:extend({
     results = { 
 		{ "snow", Config.SnowGrab_Amount }
 	},
-	icon = "__Winterio__/graphics/icons/snow.png",
+	icon = "__WinterIsComing__/graphics/icons/snow.png",
+       icon_size = 32,
   },
   {
     type = "recipe",
@@ -27,7 +28,8 @@ data:extend({
 		{ "copper-plate", 2 }
     },
     results = { { "snow-furnace", 1 } },
-	icon = "__Winterio__/graphics/icons/snow-furnace.png",
+	icon = "__WinterIsComing__/graphics/icons/snow-furnace.png",
+      icon_size = 32,
   },
   {
     type = "recipe",
@@ -41,7 +43,8 @@ data:extend({
 		{ "iron-gear-wheel", 4 }
     },
     results = { { "burner-assembling-machine", 1 } },
-	icon = "__Winterio__/graphics/icons/burner-assembling-machine.png",
+	icon = "__WinterIsComing__/graphics/icons/burner-assembling-machine.png",
+      icon_size = 32,
   },
   {
     type = "recipe",
@@ -56,6 +59,7 @@ data:extend({
     },
     results = { { "snow-pump", 1 } },
 	icon = "__base__/graphics/icons/offshore-pump.png",
+      icon_size = 32,
   },
   {
     type = "recipe",
@@ -72,7 +76,8 @@ data:extend({
     {
       {type="fluid", name="water", amount=Config.SnowMelting_Amount},
     },
-	icon = "__Winterio__/graphics/icons/snow.png",
+	icon = "__WinterIsComing__/graphics/icons/snow.png",
+      icon_size = 32,
   }
   
 })

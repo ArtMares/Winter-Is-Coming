@@ -5,7 +5,8 @@ data:extend({
   {
     type = "item",
     name = "snow",
-    icon = "__Winterio__/graphics/icons/snow.png",
+    icon = "__WinterIsComing__/graphics/icons/snow.png",
+    icon_size = 32,
     flags = {"goes-to-main-inventory"},
     subgroup = "raw-material",
     order = "0",
@@ -14,7 +15,8 @@ data:extend({
   {
     type = "item",
     name = "snow-furnace",
-    icon = "__Winterio__/graphics/icons/snow-furnace.png",
+    icon = "__WinterIsComing__/graphics/icons/snow-furnace.png",
+    icon_size = 32,
     flags = {"goes-to-quickbar"},
     subgroup = "energy",
     order = "b",
@@ -24,7 +26,8 @@ data:extend({
   {
     type = "item",
     name = "burner-assembling-machine",
-    icon = "__Winterio__/graphics/icons/burner-assembling-machine.png",
+    icon = "__WinterIsComing__/graphics/icons/burner-assembling-machine.png",
+    icon_size = 32,
     flags = {"goes-to-quickbar"},
     subgroup = "production-machine",
     order = "0",
@@ -35,6 +38,7 @@ data:extend({
     type = "item",
     name = "snow-pump",
     icon = "__base__/graphics/icons/offshore-pump.png",
+    icon_size = 32,
     flags = {"goes-to-quickbar"},
     subgroup = "extraction-machine",
     order = "b[fluids]-a[offshore-pump]",

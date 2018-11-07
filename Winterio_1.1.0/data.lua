@@ -4,99 +4,99 @@ require("prototypes.recipe")
 require("prototypes.category")
 require("config")
 
-local tiles = { "grass","grass-dry","grass-medium","sand","sand-dark","dirt","dirt-dark" }
-local water = { "water","water-green","deepwater","deepwater-green" }
+local tiles = {"grass","grass-dry","grass-medium","sand","sand-dark","dirt","dirt-dark" }
+local tiles = {"grass-dry","grass-medium","sand","sand-dark","dirt","dirt-dark"}
+local water = {"water","water-green","deepwater","deepwater-green"}
 
 for k, v in pairs( tiles ) do
-
-	data.raw["tile"][v].variants =     
-	{
+    if(data.raw.tile[v] ~= nil) then
+        log(v)
+        data.raw["tile"][v].variants = {
       main =
       {
         {
-          picture = "__Winterio__/graphics/terrain/snow/snow1.png",
+          picture = "__WinterIsComing__/graphics/terrain/snow/snow1.png",
           count = 32,
           size = 1,
         },
-        --[[{
-          picture = "__Winterio__/graphics/terrain/snow/snow2.png",
-          count = 20,
-          size = 2,
-          probability = 0.91,
-          weights = {0.150, 0.150, 0.150, 0.150, 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 },
-        },
-        {
-          picture = "__Winterio__/graphics/terrain/snow/snow4.png",
-          count = 20,
-          line_length = 10,
-          size = 4,
-          probability = 1,
-          weights = {0.100, 0.80, 0.80, 0.100, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01 }
-        }--]]
+--        {
+--          picture = "__WinterIsComing__/graphics/terrain/snow/snow2.png",
+--          count = 20,
+--          size = 2,
+--          probability = 0.91,
+--          weights = {0.150, 0.150, 0.150, 0.150, 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 },
+--        },
+--        {
+--          picture = "__WinterIsComing__/graphics/terrain/snow/snow4.png",
+--          count = 20,
+--          line_length = 10,
+--          size = 4,
+--          probability = 1,
+--          weights = {0.100, 0.80, 0.80, 0.100, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01 }
+--        }
       },
       inner_corner =
       {
-        picture = "__Winterio__/graphics/terrain/snow/blank.png",
+        picture = "__WinterIsComing__/graphics/terrain/snow/blank.png",
         count = 8
       },
       outer_corner =
       {
-        picture = "__Winterio__/graphics/terrain/snow/blank.png",
+        picture = "__WinterIsComing__/graphics/terrain/snow/blank.png",
         count = 8
       },
       side =
       {
-        picture = "__Winterio__/graphics/terrain/snow/blank.png",
+        picture = "__WinterIsComing__/graphics/terrain/snow/blank.png",
         count = 8
       }
     }
-	data.raw["tile"][v].walking_sound =
+    data.raw["tile"][v].walking_sound =
     {
       {
-        filename = "__Winterio__/sound/walking/snow1.ogg",
+        filename = "__WinterIsComing__/sound/walking/snow1.ogg",
         volume = 0.8
       },
       {
-        filename = "__Winterio__/sound/walking/snow2.ogg",
+        filename = "__WinterIsComing__/sound/walking/snow2.ogg",
         volume = 0.8
       },
       {
-        filename = "__Winterio__/sound/walking/snow3.ogg",
+        filename = "__WinterIsComing__/sound/walking/snow3.ogg",
         volume = 0.8
       },
       {
-        filename = "__Winterio__/sound/walking/snow4.ogg",
+        filename = "__WinterIsComing__/sound/walking/snow4.ogg",
         volume = 0.8
       }
     }
-	data.raw["tile"][v].map_color = {r=0.85, g=0.85, b=0.88}	
-	data.raw["tile"][v].vehicle_friction_modifier = 2	
-
-
+    data.raw["tile"][v].map_color = {r=0.85, g=0.85, b=0.88}
+    data.raw["tile"][v].vehicle_friction_modifier = 2
+    end
 end
 
 for k, v in pairs( water ) do
 
-	data.raw["tile"][v].collision_mask = {"ground-tile"}
-	data.raw["tile"][v].layer = 40
-	data.raw["tile"][v].variants =     
-	{
+    data.raw["tile"][v].collision_mask = {"ground-tile"}
+    data.raw["tile"][v].layer = 40
+    data.raw["tile"][v].variants =
+    {
       main =
       {
         {
-          picture = "__Winterio__/graphics/terrain/water/water1.png",
-          count = 32,
+          picture = "__WinterIsComing__/graphics/terrain/water/water1.png",
+          count = 16,
           size = 1,
         },
         --[[{
-          picture = "__Winterio__/graphics/terrain/snow/snow2.png",
+          picture = "__WinterIsComing__/graphics/terrain/snow/snow2.png",
           count = 20,
           size = 2,
           probability = 0.91,
           weights = {0.150, 0.150, 0.150, 0.150, 0.018, 0.020, 0.015, 0.025, 0.015, 0.020, 0.025, 0.015, 0.025, 0.025, 0.010, 0.025, 0.020, 0.025, 0.025, 0.010 },
         },
         {
-          picture = "__Winterio__/graphics/terrain/snow/snow4.png",
+          picture = "__WinterIsComing__/graphics/terrain/snow/snow4.png",
           count = 20,
           line_length = 10,
           size = 4,
@@ -106,17 +106,17 @@ for k, v in pairs( water ) do
       },
       inner_corner =
       {
-        picture = "__Winterio__/graphics/terrain/water/water-inner-corner.png",
+        picture = "__WinterIsComing__/graphics/terrain/water/water-inner-corner.png",
         count = 8
       },
       outer_corner =
       {
-        picture = "__Winterio__/graphics/terrain/water/water-outer-corner.png",
+        picture = "__WinterIsComing__/graphics/terrain/water/water-outer-corner.png",
         count = 8
       },
       side =
       {
-        picture = "__Winterio__/graphics/terrain/water/water-side.png",
+        picture = "__WinterIsComing__/graphics/terrain/water/water-side.png",
         count = 8
       }
     }
@@ -282,29 +282,27 @@ local tree_pictures = {
       }
     }
 
-local trees = 	{
-					"tree-01",
-					"tree-02",
-					"tree-03",
-					"tree-04",
-					"tree-05",
-					"tree-06",
-					"tree-07",
-					"tree-08",
-					"tree-09",
-					"tree-02-red",
-					"tree-08-red",
-					"tree-09-red",
-					"tree-06-brown",
-					"tree-08-brown",
-					"tree-09-brown",
-				}
+local trees = {
+    "tree-01",
+    "tree-02",
+    "tree-03",
+    "tree-04",
+    "tree-05",
+    "tree-06",
+    "tree-07",
+    "tree-08",
+    "tree-09",
+    "tree-02-red",
+    "tree-08-red",
+    "tree-09-red",
+    "tree-06-brown",
+    "tree-08-brown",
+    "tree-09-brown",
+}
 
 for k, v in pairs( trees ) do
-
-	data.raw["tree"][v].variations = nil
-	data.raw["tree"][v].pictures = tree_pictures
-	
+    data.raw["tree"][v].variations = nil
+    data.raw["tree"][v].pictures = tree_pictures
 end
 
 local decorations = {
@@ -332,13 +330,13 @@ local decorations = {
 					}
 
 for i = 1,#decorations do
-
-	for k, v in pairs( data.raw["decorative"][decorations[i]].pictures ) do
-		
-		v["tint"] = { r = 200, g = 200, b = 255 }
-		
-	end
-
+    if(data.raw.decorative[decorations[i]] ~= nil) then
+        if(data.raw.decorative[decorations[i]].pictures ~= nil) then
+            for k, v in pairs( data.raw.decorative[decorations[i]].pictures ) do
+                v["tint"] = { r = 200, g = 200, b = 255 }
+            end
+        end
+    end
 end
 
 if Config.Balance_Changes == true then

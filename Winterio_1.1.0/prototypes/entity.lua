@@ -3,7 +3,8 @@ data:extend({
   {
     type = "furnace",
     name = "snow-furnace",
-    icon = "__Winterio__/graphics/icons/snow-furnace.png",
+    icon = "__WinterIsComing__/graphics/icons/snow-furnace.png",
+    icon_size = 32,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {mining_time = 1, result = "snow-furnace"},
     max_health = 100,
@@ -92,7 +93,7 @@ data:extend({
     },
     animation =
     {
-      filename = "__Winterio__/graphics/entity/snow-furnace/snow-furnace.png",
+      filename = "__WinterIsComing__/graphics/entity/snow-furnace/snow-furnace.png",
       priority = "extra-high",
       width = 46,
       height = 46,
@@ -126,7 +127,8 @@ data:extend({
   {
     type = "assembling-machine",
     name = "burner-assembling-machine",
-    icon = "__Winterio__/graphics/icons/burner-assembling-machine.png",
+    icon = "__WinterIsComing__/graphics/icons/burner-assembling-machine.png",
+      icon_size = 32,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.35, result = "burner-assembling-machine"},
     max_health = 100,
@@ -144,7 +146,7 @@ data:extend({
     fast_replaceable_group = "assembling-machine",
     animation =
     {
-      filename = "__Winterio__/graphics/entity/burner-assembling-machine/burner-assembling-machine.png",
+      filename = "__WinterIsComing__/graphics/entity/burner-assembling-machine/burner-assembling-machine.png",
       priority="high",
       width = 99,
       height = 102,
@@ -197,6 +199,7 @@ data:extend({
     type = "assembling-machine",
     name = "snow-pump",
     icon = "__base__/graphics/icons/offshore-pump.png",
+      icon_size = 32,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "snow-pump"},
     max_health = 100,
