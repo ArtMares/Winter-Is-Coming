@@ -4,9 +4,10 @@ require("prototypes.recipe")
 require("prototypes.category")
 require("config")
 
-local tiles = {"grass","grass-dry","grass-medium","sand","sand-dark","dirt","dirt-dark" }
-local tiles = {"grass-dry","grass-medium","sand","sand-dark","dirt","dirt-dark"}
-local water = {"water","water-green","deepwater","deepwater-green"}
+--local tiles = {"grass","grass-dry","grass-medium","sand","sand-dark","dirt","dirt-dark" }
+--local water = {"water","water-green","deepwater","deepwater-green"}
+
+local waters = {"deepwater", "deepwater-green"}
 
 for k, v in pairs( tiles ) do
     if(data.raw.tile[v] ~= nil) then
